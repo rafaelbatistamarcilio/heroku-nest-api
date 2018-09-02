@@ -58,7 +58,7 @@
     "coverageDirectory": "../coverage"
   },
   "engines": {
-    "node": "10.9.0",
+    "node": "10.8.0",
     "npm": "6.2.0"
   }
 }
