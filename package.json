@@ -55,5 +55,9 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "coverageDirectory": "../coverage"
+  },
+  "engines": {
+    "node": "10.9.0",
+    "npm": "6.2.0"
   }
 }
