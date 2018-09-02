@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
-    "start":"npm run start:prod",
+    "postinstall": "tsc",
+    "start":"node dist/main.js",
     "start_OLD": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "nodemon",
     "prestart:prod": "rm -rf dist && tsc",
@@ -58,7 +59,7 @@
     "coverageDirectory": "../coverage"
   },
   "engines": {
-    "node": "10.3.0",
-    "npm": "6.1.0"
+    "node": "10.9.0",
+    "npm": "6.2.0"
   }
 }
