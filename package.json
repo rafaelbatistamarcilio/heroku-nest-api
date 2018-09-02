@@ -8,7 +8,6 @@
     "format": "prettier --write \"**/*.ts\"",
     "postinstall": "tsc",
     "start":"node dist/main.js",
-    "start_OLD": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "nodemon",
     "prestart:prod": "rm -rf dist && tsc",
     "start:prod": "node dist/main.js",
