@@ -8,7 +8,7 @@
     "format": "prettier --write \"**/*.ts\"",
     "postinstall": "tsc",
     "start": "node dist/main.js",
-    "start:dev": "nodemon",
+    "start:dev": "tsc && node -r dotenv/config dist/main.js",
     "prestart:prod": "rm -rf dist && tsc",
     "start:prod": "node dist/main.js",
     "start:hmr": "node dist/server",
@@ -20,11 +20,14 @@
   "dependencies": {
     "@nestjs/common": "^5.3.5",
     "@nestjs/core": "^5.3.4",
+    "@nestjs/typeorm": "^5.2.1",
     "@nestjs/websockets": "^5.3.1",
     "fastify-formbody": "^2.0.1",
+    "mongodb": "^3.1.4",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.3.2",
     "ts-node": "^7.0.1",
+    "typeorm": "^0.2.7",
     "typescript": "^3.0.3"
   },
   "devDependencies": {
@@ -33,6 +36,7 @@
     "@types/jest": "^23.3.2",
     "@types/node": "^10.9.4",
     "@types/supertest": "^2.0.6",
+    "dotenv": "^6.0.0",
     "jest": "^23.5.0",
     "nodemon": "^1.18.4",
     "prettier": "^1.14.2",

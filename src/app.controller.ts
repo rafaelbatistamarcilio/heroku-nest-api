@@ -3,7 +3,12 @@ import { AppService } from './app.service';
 
 @Controller('app')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
+
+  @Get('photo')
+  async savePhoto() {
+    return await this.appService.savePhoto();
+  }
 
   @Get()
   root(): string {
