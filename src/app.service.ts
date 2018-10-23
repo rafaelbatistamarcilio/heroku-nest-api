@@ -27,4 +27,13 @@ export class AppService {
       throw error;
     }
   }
+
+  async findAll():Promise<Photo[]> {
+    try {
+      return await this.photoRepository.find();
+    } catch (error) {
+      Logger.error(error);
+      throw error;
+    }
+  }
 }
